@@ -1,0 +1,78 @@
+{
+  "name": "symphony-react-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --mode development",
+    "lint": "standard --fix",
+    "test": "standard --fix && jest",
+    "build": "standard --fix && jest && webpack --mode production",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "file-loader": "^2.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^4.12.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.6.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.2.1",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.18.0",
+    "babel-plugin-react-css-modules": "^3.4.2",
+    "css-loader": "^1.0.0",
+    "qs": "^6.5.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "./setupTests.js"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe",
+      "expect",
+      "it",
+      "location"
+    ],
+    "ignore": [
+      "/dist/",
+      "/node_modules/"
+    ]
+  }
+}
